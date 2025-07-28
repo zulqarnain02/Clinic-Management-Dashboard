@@ -30,11 +30,11 @@ import { AppointmentModule } from './appointment/appointment.module';
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
         logging: true,
-        // ssl: {
-        //   rejectUnauthorized: false,
-        //   // ca: configService.get('CA_CERT') || fs.readFileSync(path.join(process.cwd(), 'ca.pem'))
-        //   ca: configService.get('CA_CERT')
-        // }
+        ssl: {
+          rejectUnauthorized: false,
+          // ca: configService.get('CA_CERT') || fs.readFileSync(path.join(process.cwd(), 'ca.pem'))
+          ca: configService.get('CA_CERT')
+        }
       }),
       inject: [ConfigService],
     }),
